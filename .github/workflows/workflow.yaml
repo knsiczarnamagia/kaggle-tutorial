@@ -1,0 +1,45 @@
+name: Check formatting, version bumping and unit tests
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install Poetry
+        uses: abatilo/actions-poetry@v2.1.0
+        with:
+          poetry-version: '1.8.3'
+
+      - name: Install dependencies
+        run: poetry install --no-root
+
+      - name: Fetch all branches
+        run: git fetch --all
+
+      - name: Make version check script executable
+        run: chmod +x check_poetry_version.sh
+
+      - name: Check version bump in pyproject.toml
+        run: bash ./check_poetry_version.sh
+
+      - name: Check code formatting
+        run: make check
+
+      - name: Run tests
+        run: make test
+
+
+
+

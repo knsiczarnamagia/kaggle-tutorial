@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kaggle-tutorial"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 authors = ["Jan Karas <mygnirut@gmail.com>"]
 readme = "README.md"
@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 kaggle = "^1.6.17"
+ruff = "^0.8.1"
 
 
 [build-system]
