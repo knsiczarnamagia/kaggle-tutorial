@@ -1,6 +1,5 @@
-# Kaggle Tutorial
-
-Kick-off repository for starting with Kaggle!
+# 🌊 Kaggle Tutorial 🚢
+Kick-off repository for starting with Kaggle prepared by `Świta Znachora` for WAVE 3 Workshops!
 
 - [How to Use Kaggle](https://www.kaggle.com/docs/api#getting-started-installation-&-authentication) - official guide
   how to use Kaggle via API.
